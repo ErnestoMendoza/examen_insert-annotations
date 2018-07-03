@@ -221,10 +221,6 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
-      <Project>{29a7a5d3-d26c-4932-8791-5284780ff802}</Project>
-      <Name>DataAccessLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Examen.Entidades\Examen.Entidades.csproj">
       <Project>{e371fa19-57e3-45fe-a484-72189e1111fa}</Project>
       <Name>Examen.Entidades</Name>

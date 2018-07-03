@@ -4,51 +4,92 @@
 }
 
 
-@using(Html.BeginForm("Save", "", FormMethod.Post, new { id = "signupform" }))
-{
-@Html.AntiForgeryToken()
-<h4>Crear Persona</h4>
-<hr />
 
-<div class="form-group">
-    @Html.LabelFor(model => model.Nombre, new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
-    </div>
-</div>
-<br /> <br /> <br />
-<div class="form-group">
-    @Html.LabelFor(model => model.aPaterno, new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(model => model.aPaterno, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.aPaterno, "", new { @class = "text-danger" })
-    </div>
-</div>
-<br /> <br />
-<div class="form-group">
-    @Html.LabelFor(model => model.aMaterno, new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(model => model.aMaterno, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.aMaterno, "", new { @class = "text-danger" })
-    </div>
-</div>
-<br /> <br />
-<div class="form-group">
-    @Html.LabelFor(model => model.curp, new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(model => model.curp, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.curp, "", new { @class = "text-danger" })
-    </div>
-</div>
-<br />
-}
 
-<button type="button" class="btn btn-primary" id="button1">Guardar</button>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Crear Persona</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="myForm">
+                    @Html.AntiForgeryToken()
+                    <h2>Crear Persona</h2>
+                    <hr />
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nombre, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br /> <br /> <br />
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.aPaterno, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.aPaterno, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.aPaterno, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br /> <br />
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.aMaterno, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.aMaterno, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.aMaterno, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br /> <br />
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.curp, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.curp, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.curp, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <input id="button1" type="button" value="submit" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <script>
+
     $("#button1").click(function () {
-        $("#signupform").submit();
+
+        var data = $("#myForm").serialize();
+
+        $.ajax({
+            type: "POST",
+            URL: "/Home/Index",
+            data: data,
+            success: function (response) {
+                alert("success");
+            }
+        })
     });
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
 </script>
 
 

@@ -5,9 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Data;
-using System.Data.SqlClient;
-using DataAccessLayer;
 
 namespace Examen.Entidades
 {
@@ -37,12 +34,5 @@ namespace Examen.Entidades
         [StringLength(18, MinimumLength = 18, ErrorMessage = "Formato incorrecto")]
         public string curp { get; set; }
 
-      
-
-       
-        public void insert_record()
-        {
-            
-        }
     }
 }
