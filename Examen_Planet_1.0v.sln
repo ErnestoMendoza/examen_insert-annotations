@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examen_Planet_1.0v", "Examen_Planet_1.0v\Examen_Planet_1.0v.csproj", "{26F0F0A4-85E7-4203-BADE-1086588B69B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examen.Entidades", "Examen.Entidades\Examen.Entidades.csproj", "{E371FA19-57E3-45FE-A484-72189E1111FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{29A7A5D3-D26C-4932-8791-5284780FF802}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{26F0F0A4-85E7-4203-BADE-1086588B69B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26F0F0A4-85E7-4203-BADE-1086588B69B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26F0F0A4-85E7-4203-BADE-1086588B69B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E371FA19-57E3-45FE-A484-72189E1111FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E371FA19-57E3-45FE-A484-72189E1111FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E371FA19-57E3-45FE-A484-72189E1111FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E371FA19-57E3-45FE-A484-72189E1111FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A7A5D3-D26C-4932-8791-5284780FF802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A7A5D3-D26C-4932-8791-5284780FF802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A7A5D3-D26C-4932-8791-5284780FF802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A7A5D3-D26C-4932-8791-5284780FF802}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
